@@ -4,7 +4,9 @@ Up until now, we have used data that is written directly into the code as a vari
 
 **Setup**
 
-We will have the same anscombe data, but this time as 2 different types of data files.
+We will have the same anscombe data, but this time as 2 different a external data.json file. Download the files for module 4 from the fall 2022 course github repository.
+
+[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization)
 
 **Index.html** \- this is where the structure of our webpage will live.
 

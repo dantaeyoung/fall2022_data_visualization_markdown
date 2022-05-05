@@ -8,7 +8,7 @@ D3 has an extensive built-in set of behaviors that can trigger transformations o
 
 Download the files for module 5 from the fall 2022 course github repository.
 
-[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/module2\_anscombe](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization/tree/main/module2_anscombe&sa=D&source=editors&ust=1651776781671570&usg=AOvVaw0-1qZZVAhDauNYWZDaBe5n)
+[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization)
 
 Inside you will find 3 files that you should be familiar with from the setup module.
 

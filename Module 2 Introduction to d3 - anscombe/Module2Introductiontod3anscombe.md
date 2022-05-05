@@ -14,9 +14,9 @@ Intro to HTML, CSS
 
 **Step 1. Setup**
 
-If you did not download all the sequence files previously, download the files for module 2 from the fall 2022 course github repository. 
+Download the files for module 2 from the fall 2022 course github repository.
 
-[https://github.com/CenterForSpatialResearch/fall2022_data_visualization/tree/main/module2_anscombe](https://github.com/CenterForSpatialResearch/fall2022_data_visualization/tree/main/module2_anscombe)
+[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization)
 
 Inside module2_anscombe you will find the 3 files below:
 

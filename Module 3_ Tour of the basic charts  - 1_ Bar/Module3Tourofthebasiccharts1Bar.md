@@ -6,7 +6,9 @@ We will again use the anscombe dataset, but this time create 3  additional type
 
 **Setup**
 
-Download the files for module 3 as a zipped folder. Inside you will find 3 files
+Download the files for module 3 from the fall 2022 course github repository.
+
+[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization)
 
 **Index.html** - this is where the structure of our webpage will live. We will create “div” objects by hand inside this html file to place our charts. It is blank to start with.
 

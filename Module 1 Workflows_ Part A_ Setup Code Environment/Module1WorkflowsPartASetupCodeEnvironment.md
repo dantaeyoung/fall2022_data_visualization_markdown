@@ -26,7 +26,7 @@ Unzip the downloaded contents and save to somewhere you will be storing your pro
 
 **Step 3 Open downloaded files in Visual Studio Code**
 
-Open Visual Studio and click on “Open Folder” or go to “File” and select “Open Folder” Navigate to the folder  you downloaded and unzipped earlier, and select the module 1 folder inside to open.
+Open Visual Studio and click on “Open Folder” or go to “File” and select “Open Folder” Navigate to the folder  you downloaded and unzipped earlier, and select the **module 1 folder** inside to open.
 ![alt_text](images/image7.png "image_tooltip")
 
 

@@ -12,7 +12,9 @@ In this section we will be further familiarizing ourselves with functions, and a
 
 **Setup**
 
-We will work with the same 3 files as in the bar section.
+We will work with the same 3 files as in the bar section. Download the files for module 3 from the fall 2022 course github repository.
+
+[https://github.com/CenterForSpatialResearch/fall2022\_data\_visualization/tree/main/](https://www.google.com/url?q=https://github.com/CenterForSpatialResearch/fall2022_data_visualization)
 
 **Index.html** - this is where the structure of our webpage will live.
 
