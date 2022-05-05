@@ -20,14 +20,17 @@ If you did not download all the sequence files previously, download the files fo
 
 Inside module2_anscombe you will find the 3 files below:
 
-    Index.html
-    This is where the structure of our webpage will live. We will create “div” objects by hand inside this html file to place our charts. **To start, this is a blank template.**
+**Index.html**
 
-    D3.js
-    this is the d3 library file, we are using version 6. We will not be altering this file at all. We will link this file to our html file so that we can access its contents and use d3.js methods.
+This is where the structure of our webpage will live. We will create “div” objects by hand inside this html file to place our charts. **To start, this is a blank template.**
 
-    anscombe.js
-    This is the file you will write your javascript code in. It will be linked to your Index.html file in the same way as the d3.js library file. **To start, this file is blank.**
+**D3.js**
+
+this is the d3 library file, we are using version 6. We will not be altering this file at all. We will link this file to our html file so that we can access its contents and use d3.js methods.
+
+**anscombe.js**
+
+This is the file you will write your javascript code in. It will be linked to your Index.html file in the same way as the d3.js library file. **To start, this file is blank.**
 
 Open the folder with Visual Studio Code. Go to “File” menu in Visual Studio Code, and then clicking on “Open Folder”, or simply by dragging the folder to the application’s icon.
 
@@ -90,7 +93,6 @@ svg.append("circle")
 .attr("cy",20)
 ```
 
-
 Now you should see a circle appear on the page.
 ![alt_text](images/image1.png "image_tooltip")
 
@@ -129,17 +131,16 @@ We can use dot notation
 console.log(set1[0].x)
 ```
 
-Or we can use square brackets once again, by placing the x in quotation marks.
+Or we can use square brackets once again, by placing the x in quotation marks. X is in quotation marks here because we are using it as a string in the context of a key, and not a variable.
 
 ```
 console.log(set1[0]["x"])
 ```
-These both work to access the value 10 and print it out to the console.
+These both work to access the value 10 by itself and print it out to the console.
 
 Now that we have the data for set1, and have reviewed how to access values within it, let’s start building our d3 chain and our scatterplot.
 
-We start once again with a selection, then this time we will set the data, and attach circles to it.
-
+We start once again with a selection, then we will set the data as set1, and attach circles to it.
 
 ```
 svg.selectAll("circle")
@@ -160,13 +161,9 @@ Svg is the canvas we created in step 2, which we will be placing our circles on,
 We are appending circles for a scatterplot in this case, but you can append anything from HTML paragraphs, to jpeg image tags. 
 
 Now if we look at the page, nothing will be on the page itself, we will not see circles. That is because we have not set the radius, cx, and cy for these circles. However we can check that they are there by opening the developer’s console and expending the svg section in the elements tab. We can see that there are 10 circle elements in our svg. Next we will set their attributes so that they are visible.
-
-
-![alt_text](images/image7.png "image_tooltip")
-
+![alt_text](images/image6.png "image_tooltip")
 
 Let’s add the following to our chain:
-
 
 ```
 .attr("r",5)
@@ -178,40 +175,31 @@ Let’s add the following to our chain:
 })
 ```
 
-
 Here we are setting the radius of each of our 10 circles to 5 pixels. And we are setting the circle’s x and y values to the x and y values of each of the objects in set1.
 
 In our developer’s console’s elements tab, we see that the circle elements inside the svg now has r, cx, and cy attributes set for each one, and we can check that the x and y values do in fact correspond to our dataset set1.
 
-
-![alt_text](images/image8.png "image_tooltip")
-
-
-Now let’s go to our browser window. We can see the circles on the page, although they are very close together. 
+![alt_text](images/image10.png "image_tooltip")
 
 
-![alt_text](images/image9.png "image_tooltip")
+Now let’s go to our browser window. We can see the circles on the page, although they are very close together in the very upper left corner. 
 
+![alt_text](images/image11.png "image_tooltip")
 
 Why is that? The x and y values we used here are directly translated to pixel values on the screen, which means that the first circle is placed only 10 pixels to the right and 8 pixels from the top of the window.  In fact, all these values are too small to be drawn directly without scaling. You will find that it is often the case that values need to be scaled up or down to be visually legible on the screen. Next we will implement a d3 scale to solve this problem.
 
 **Step 5 Scale**
 
-A d3 scale take a set of values as input, and scales them to a different set of values that are more suited for a specific visualization. In this case, we are scaling numerical values that are between 4 and 14 to fit our svg which has the width and height of 400 pixels.
-
-D3 has different types of scales, but in this example we will start with a linear scale.
+A d3 scale take a set of values as input, and scales them to a different set of values that are more suited for a specific visualization. In this case, we are scaling numerical values that are between 4 and 14 to fit our svg which has the width and height of 400 pixels. D3 has different types of scales, but in this example we will start with a linear scale.
 
 We declare a variable as a linear scale.
-
 
 ```
 var xScale = d3.scaleLinear()
 ```
 
 
-Then we set the input and output of that scale, these are the domain and range.
-
-The domain(input) is the extent of values found in your dataset, and the range(output) is the set of resulting values you would like to use for your visualization. Let’s add those to our scale.
+Then we set the input and output of that scale, these are the domain and range.The domain(input) is the extent of values found in your dataset, and the range(output) is the set of resulting values you would like to use for your visualization. Let’s add those to our scale.
 
 
 ```
@@ -246,21 +234,15 @@ var yScale = d3.scaleLinear()
 Now looking at our browser window, we have a clearer view of the circles and the main portion of our first scatterplot is complete.
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image13.png "image_tooltip")
 
 
-**Step 6 axis and labels**
+**Step 6 Axis and Labels**
 
-No chart is complete without references to scale and labeling. Let’s add those next.
-
-D3 has builtin functionality to create the axis. We declare a variable for the x axis and the y axis.
-
-
+No chart is complete without references to scale and labeling. Let’s add those next. D3 has builtin functionality to create the axis. We start by declaring a variable for the x axis and the y axis.
 ```
 var xAxis = d3.axisBottom().scale(xScale)
 ```
-
-
 Every axis needs 2 things, its orientation(left, right, bottom, top) and the scale it uses. 
 
 In our case, our xAxis is on the bottom of the chart, so we will use axisBottom, and we will be using the scale variable we already created to place the circles here. 
@@ -289,7 +271,7 @@ svg.append("g").call(yAxis)
 Now we can see the x axis at the top of the page - although it is oriented for the bottom with the ticks and number labels below. Similarly we can see a line to the left, that is the y axis with ticks and labels off the screen to the left.
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image16.png "image_tooltip")
 
 
 The axis are oriented the right way but their position is at the top and very left of the page. We now need to reposition them, and also our scatterplot circles on the svg so that everything makes sense.
@@ -305,7 +287,7 @@ svg.append("g").call(yAxis).attr("transform","translate(30,30)")
 
 
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image14.png "image_tooltip")
 
 
 For the x axis, we will need to move the axis 30 pixel each way as well to accommodate what we just did with the y axis. In addition, we will move the x axis to the bottom of the chart by adding 300 pixels(the pixel value which is the maxim for our scale). 
@@ -315,9 +297,7 @@ For the x axis, we will need to move the axis 30 pixel each way as well to accom
 svg.append("g").call(xAxis).attr("transform","translate(30,330)")
 ```
 
-
-
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image18.png "image_tooltip")
 
 
 And finally let’s not forget that we need to move all our circles 30 pixels in each direction as well to align with the axis. Let’s add this line to the bottom of our circle drawing chain.
@@ -327,12 +307,7 @@ And finally let’s not forget that we need to move all our circles 30 pixels in
 .attr("transform","translate(30,30)")
 ```
 
-
 The circles have shifted slightly to align with the axis.
-
-
-![alt_text](images/image14.png "image_tooltip")
-
 
 Finally let’s add text labels to our x and y axis. We will position the labels manually for now.
 
@@ -346,57 +321,43 @@ svg.append("text").text("y").attr("x",0).attr("y",160)
 And here is our completed scatterplot.
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 We can now go and take a look at the original plot for this set on wikipedia here: https://en.wikipedia.org/wiki/Anscombe%27s_quartet
 
 It is very similar to the first dataset plot pictured here. Now let’s try to make the second set.
 
-**Step 7 **Experiment with changing the data
 
-Let’s add a second dataset from the quartet.
+**Step 7 Experiment with changing the data**
 
-
+Let’s add a second dataset from the quartet. Copy and paste this new dataset varaible below set1.
 ```
 var set2 = [{x:10,y:9.14},{x:8,y:8.14},{x:13,y:8.74},{x:9,y:8.77},{x:11,y:9.26},{x:14,y:8.1},{x:6,y:6.13},{x:4,y:3.1},{x:12,y:9.13},{x:7,y:7.26},{x:5,y:4.74}]
 ```
-
-
 And let’s see what this one looks like. We can simply go back to where we set the chart data to set1, and change the data to the values in the variable set2
-
-
 ```
 .data(set2)
 ```
-
-
 When we save this file, we will see an entirely new plot replace our first. 
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image17.png "image_tooltip")
 
 
-**Step 8 **Encapsulation
+**Step 8 Encapsulation**
 
-Simply by changing the data we use, we can generate a new plot. What if we can use the code we have written to generate plots for all 4 sets of data in the quartet without repeating the code?
-
-We can encapsulate our current code within a function so that when the input into the function changes, a plot using a different dataset is generated.
+Simply by changing the data we use, we can generate a new plot. What if we can use the code we have written to generate plots for all 4 sets of data in the quartet without repeating the code? We can encapsulate our current code within a function so that when the input into the function changes, a plot using a different dataset is generated.
 
 Let’s try it.
 
-First let’s declare a function:
-
-
+First let’s declare a function. We name the function for what it does so make function names as simple but as descriptive as possible.
 ```
 function scatterPlot(){
 
-
 }
 ```
-
-
-We will copy our existing drawing code inside this function and then call it to draw the scatterplot.
+We will copy our existing drawing code inside this function between the 2 curly braces {}, and then call it to draw the scatterplot.
 
 
 ```
@@ -440,37 +401,27 @@ function scatterPlot(){
 
 }
 ```
-
-
- Once you save this change, you will see the scatterplot disappear from the browser page. That is because we must call the function for it to run again.
-
-
+ Once you save this change, you will see the scatterplot disappear from the browser page. That is because we must call the function for it to run again. To call a function:
 ```
 scatterPlot()
 ```
-
+![alt_text](images/image8.png "image_tooltip")
 
 And if we call this function multiple times, we will see multiple svgs with scatterplots appear on the page. Try 4.
-
-
 ```
 scatterPlot()
 scatterPlot()
 scatterPlot()
 scatterPlot()
 ```
-
-
-
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image15.png "image_tooltip")
 
 
 However, each of these are identical. To really be useful, the plot would be set independently for each time the function is run. Let’s reproduce the quartet next with its 4 sets of data. 
 
-**Step 9 **Reproducing the rest of the quartet
+**Step 9 Reproducing the rest of the quartet**
 
-First here are the rest of the quartet as 2 additional variables.
-
+First here are the rest of the quartet as 2 additional variables. Let's copy these into the top of our code.
 
 ```
 var set3 = [{x:10,y:7.46},{x:8,y:6.77},{x:13,y:12.74},{x:9,y:7.11},{x:11,y:7.81},{x:14,y:8.84},{x:6,y:6.08},{x:4,y:5.39},{x:12,y:8.15},{x:7,y:6.42},{x:5,y:5.73}]
@@ -503,6 +454,7 @@ Here we are calling the function with the set1 variable as the input.
 ```
 scatterPlot(set1)
 ```
+![alt_text](images/image8.png "image_tooltip")
 
 
 We can see that the set1 plot has reappeared on the page. Let’s try with the other sets:
@@ -519,4 +471,4 @@ scatterPlot(set4)
 And here we have it, Anscombe’s quartet in d3.js
 
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image4.png "image_tooltip")
