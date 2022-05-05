@@ -31,7 +31,7 @@ Modules
 
 2\. [Your first SVG drawing in D3.js, exploring Anscombe's quartet](Module%202%20Introduction%20to%20d3%20-%20anscombe/Module2Introductiontod3anscombe.md)
 
-3\. **Visual mapping with 3 basic chart types** - 3 parts
+3\. Visual mapping with 3 basic chart types - 3 parts
 
 [Part 1 Bar](Module%203_%20Tour%20of%20the%20basic%20charts%20%20-%201_%20Bar/Module3Tourofthebasiccharts1Bar.md)
 

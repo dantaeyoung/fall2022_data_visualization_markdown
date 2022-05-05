@@ -20,17 +20,11 @@ If you did not download all the sequence files previously, download the files fo
 
 Inside module2_anscombe you will find the 3 files below:
 
-**Index.html**
+**Index.html** - This is where the structure of our webpage will live. We will create “div” objects by hand inside this html file to place our charts. **To start, this is a blank template.**
 
-This is where the structure of our webpage will live. We will create “div” objects by hand inside this html file to place our charts. **To start, this is a blank template.**
+**D3.js** - this is the d3 library file, we are using version 6. We will not be altering this file at all. We will link this file to our html file so that we can access its contents and use d3.js methods.
 
-**D3.js**
-
-this is the d3 library file, we are using version 6. We will not be altering this file at all. We will link this file to our html file so that we can access its contents and use d3.js methods.
-
-**anscombe.js**
-
-This is the file you will write your javascript code in. It will be linked to your Index.html file in the same way as the d3.js library file. **To start, this file is blank.**
+**anscombe.js** - This is the file you will write your javascript code in. It will be linked to your Index.html file in the same way as the d3.js library file. **To start, this file is blank.**
 
 Open the folder with Visual Studio Code. Go to “File” menu in Visual Studio Code, and then clicking on “Open Folder”, or simply by dragging the folder to the application’s icon.
 

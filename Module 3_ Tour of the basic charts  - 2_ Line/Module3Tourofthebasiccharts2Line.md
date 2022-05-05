@@ -14,17 +14,11 @@ In this section we will be further familiarizing ourselves with functions, and a
 
 We will work with the same 3 files as in the bar section.
 
-**Index.html**
+**Index.html** - this is where the structure of our webpage will live.
 
-this is where the structure of our webpage will live.
+**D3.js** - this is the d3 library’s contents. We will not be altering this file at all. We will link this this file to our html file so that we can access its contents and use d3.js methods.
 
-**D3.js**
-
-this is the d3 library’s contents. We will not be altering this file at all. We will link this this file to our html file so that we can access its contents and use d3.js methods.
-
-**charts.js**
-
-This is the file you will write your javascript code in. It is linked to your index.html file in the same way as the d3.js library file.  This file now contains 4 dataset variables, a function for bar charts, and perhaps some function calls that you made.
+**charts.js** - This is the file you will write your javascript code in. It is linked to your index.html file in the same way as the d3.js library file.  This file now contains 4 dataset variables, a function for bar charts, and perhaps some function calls that you made.
 
 
 **Line Chart Step 1**
