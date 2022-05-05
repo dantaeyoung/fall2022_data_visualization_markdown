@@ -27,21 +27,21 @@ This sequence assumes that you have a fundamental understanding of HTML from a d
 Modules
 -------
 
-1\. [Setting up your workspace and workflow]()
+1\. [Setting up your workspace and workflow](Module%201%20Workflows_%20Part%20A_%20Setup%20Code%20Environment/Module1WorkflowsPartASetupCodeEnvironment.md)
 
-2\. [Your first SVG drawing in D3.js, exploring Anscombe's quartet]()
+2\. [Your first SVG drawing in D3.js, exploring Anscombe's quartet](Module%202%20Introduction%20to%20d3%20-%20anscombe/Module2Introductiontod3anscombe.md)
 
-3\. Basic chart types and visual mappings
+3\. **Visual mapping with 3 basic chart types** - 3 parts
 
-[Part 1 Bar]()
+[Part 1 Bar](Module%203_%20Tour%20of%20the%20basic%20charts%20%20-%201_%20Bar/Module3Tourofthebasiccharts1Bar.md)
 
-[Part 2 Line]()
+[Part 2 Line](Module%203_%20Tour%20of%20the%20basic%20charts%20%20-%202_%20Line/Module3Tourofthebasiccharts2Line.md)
 
-[Part 3 Pie]()
+[Part 3 Pie](Module%203_%20Tour%20of%20the%20basic%20charts%20%20-%203_%20Pie/Module3Tourofthebasiccharts3Pie.md)
 
-4\. [Working with external data]()
+4\. [Working with external data](Module%204_%20Working%20with%20external%20data/Module4Workingwithexternaldata.md)
 
-5\. [Introduction to interactivity with selections]()
+5\. [Introduction to interactivity with selections](Module%205_%20Building%20interactivity/Module5Buildinginteractivity.md)
 
 
 Outside references
