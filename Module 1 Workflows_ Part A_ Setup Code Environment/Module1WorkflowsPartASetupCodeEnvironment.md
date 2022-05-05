@@ -2,11 +2,7 @@
 
 **Introduction**
 
-There are many different ways to set up your workspace to start programming for the web. If you have a favorite text editor and method to run the local server, perhaps directly from the terminal, please feel free to do so. 
-
-For the purpose of this class, we will use visual studio as our text editor, and its live server extension to run the local server to view our code in the browser.
-
-In this short tutorial, you will download and install the software necessary to run javascript code on your local server. This is the work environment we will be using for the rest of the modules.
+There are many different ways to set up your workspace to start programming for the web. If you have a favorite text editor and method to run the local server, perhaps directly from the terminal, please feel free to do so. For the purpose of this class, we will use visual studio as our text editor, and its live server extension to run the local server to view our code in the browser. In this short tutorial, you will download and install the software necessary to run javascript code on your local server. This is the work environment we will be using for the rest of the modules.
 
 **Step 1 Download and Install Software**
 
