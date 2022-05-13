@@ -6,7 +6,7 @@ Line
 
 Here is one of the earliest examples of a line chart, it looks very much like something we would create today. Its subject matter is trade between countries, one of the most popular topics of early charts that gave rise to statistical graphics in its golden age(1900-). It is also of note because the author William Playfair, perhaps the most prolific early data visualizer, also invented the bar chart and many of the other graphical strategies we use today.
 
-In this section we will be further familiarizing ourselves with functions, and also adding some logic structures such as loops to make some design decisions for our data.![](images/image1.png)
+In this section we will be further familiarizing ourselves with functions, and also adding some logic structures such as loops to make some design decisions for our data.![](images/3-2-image1.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair\_TimeSeries-2.png](https://www.google.com/url?q=https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png&sa=D&source=editors&ust=1651774865439910&usg=AOvVaw2BO6EidGTLv7hBwC5TTqY2)
 
@@ -65,7 +65,7 @@ Alternatively, we can also wrap our data in square brackets so that it is treate
 
 Both of the above syntax will create the same result.
 
-![](images/image8.png)
+![](images/3-2-image8.png)
 
 
 **Line Chart Step 2 Styling the line**
@@ -75,7 +75,7 @@ Black fill, and no stroke is the default in d3, so we must set fill to “none�
        .attr("fill","none")
        .attr("stroke","black")
 
-![](images/image3.png)
+![](images/3-2-image3.png)
 
 Here it is, the x values of set 1 as a line. 
 
@@ -121,7 +121,7 @@ how do they look when called using the other 3 dataset variables?
     lineChart(set3)
     lineChart(set4)
 
-![](images/image4.png)
+![](images/3-2-image4.png)
 
 Looking at these, the pattern of the 3 identical red lines are actually obscured by the blue, maybe a better use of the line chart is to create 2 charts, 1 containing the x values of all 4 sets, and the 2nd containing all the y values. 
 
@@ -163,7 +163,7 @@ When we call this new function with the data and svg
 
 A single line for set1 x values appear
 
-![](images/image7.png)
+![](images/3-2-image7.png)
 
 If we call this function again with set2
 
@@ -181,7 +181,7 @@ When we draw all 4 lines
 
 We see that set4’s x value line is distinct. Whereas the other 3 lines are identical.
 
-![](images/image2.png)
+![](images/3-2-image2.png)
 
 A transparency might be a good way to clarify the data represented in this chart. The opacity attribute can be set for svg elements with a numerical value between 0 and 1.
 
@@ -189,7 +189,7 @@ A transparency might be a good way to clarify the data represented in this chart
 
     .attr("opacity",.3)
 
-![](images/image5.png)
+![](images/3-2-image5.png)
 
 Now we can see how the lines compare.
 
@@ -197,6 +197,6 @@ Now we can see how the lines compare.
 
 Let’s repeat the process for the y values for all 4 sets. You have many options here, editing your existing function, using a loop, or simply calling the function 4 times. Start by creating a second svg to draw your y values. You will end up with something like this:
 
-![](images/image6.png)
+![](images/3-2-image6.png)
 
 How do these compare to our last 3 sets of charts? What aspects of the data do these highlight? What do they obscure? How might we improve on the graphical encoding of this with line weight, and stroke color?

@@ -52,14 +52,14 @@ Before adding it to our svg as a path
 
 Although nothing appears in the browser page, we can see that the paths are being drawn when we look at the elements tab of the developer console.
 
-![](images/image8.png)
+![](images/3-3-image8.png)
 
 Next let’s set a inner and outer radius for our pie to draw them. If we set a inner radius that is larger than 0, then we have created a donuts chart.
 
     .innerRadius(0)
     .outerRadius(100)
 
-![](images/image4.png)
+![](images/3-3-image4.png)
 
 We have  a pie chart, unfortunately its center is set at 0,0 so only a quarter is visible. We will shift it to the right and down by 100 pixels. It is easiest to do this as a whole, so let’s add a group and the transform attribute to our svg definition
 
@@ -72,14 +72,14 @@ We have  a pie chart, unfortunately its center is set at 0,0 so only a quarter 
 
 Our whole pie is now visible, although it is hard to distinguish the slices without color coding.
 
-![](images/image7.png)
+![](images/3-3-image7.png)
 
 First we can set the stroke color and width so the slices have better separation
 
          .attr("stroke","white")
          .style("stroke-width", "2px")
 
-![](images/image3.png)
+![](images/3-3-image3.png)
 
 Next let’s introduce some colors. Here is an array of hex color values that we can assign to slices
 
@@ -93,7 +93,7 @@ We can use the index value in our data to access these colors. Before we do that
 
 In the Console tab of your devTools, you will see the data for each slice of pie printed out. Each slice has the data, endAngle, sartAngle, value, and index.
 
-![](images/image6.png)
+![](images/3-3-image6.png)
 
 Let’s use the index value of each slice(d.index) to assign the colors. For clarity we will assign this value to a new variable called sliceIndex.
 
@@ -118,16 +118,16 @@ When you save this last change, we can see that the pie chart is still black. Th
                return colors\[sliceIndex\]
            })
 
-![](images/image9.png)
+![](images/3-3-image9.png)
 
 Now that our pie chart is somewhat complete, what do we think of how it has represented the data? Perhaps drawing out the whole set will help. Here are our 4 x value pies.
 
-![](images/image1.png)
+![](images/3-3-image1.png)
 
 And our y value pies.
 
-![](images/image5.png)
+![](images/3-3-image5.png)
 
 These are pretty difficult to decipher for this dataset. What would be a good dataset to map a pie to? Take a look back at all 4 types of charts from this and the last module and consider what basic chart type you would use to make your point with this data.
 
-![](images/image2.png)
+![](images/3-3-image2.png)

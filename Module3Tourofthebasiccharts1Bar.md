@@ -29,7 +29,7 @@ Let’s start straight away with a function this time. We will also be placing o
 
 We should see that the text “our chart will go here” appears on the browser page once we save our changes.
 
-![](images/image11.png)
+![](images/3-1-image11.png)
 
 Now let’s turn to the chart.js file to create that initial chart. chart.js is blank to start with except for the 4 variables set1 - 4 below which are our datasets.
 
@@ -65,7 +65,7 @@ The first thing we can do is add a blank svg to our function. This should be fam
 
 We can see that this is correctly run if we open the developer’s console and look at the elements tab. We can see that if we expand the div with id “chart”, there is a svg in it.
 
-![](images/image1.png)
+![](images/3-1-image1.png)
 
 **Barchart Step 2**
 
@@ -78,7 +78,7 @@ Next let’s start drawing our bar chart inside our drawChart function. Once aga
 
 Take a look at the developer’s console after you save this step. You should see if you expand the svg element, that there are 11 rectangle elements inside. Although for now they do not have any attributes and are invisible on the browser page.
 
-![](images/image8.png)
+![](images/3-1-image8.png)
 
 **Barchart Step 3**
 
@@ -106,11 +106,11 @@ And finally we will use the index value(the order that the objects our data is i
 
 When we save these attributes, we will see a very very small upside down barchart in our window on the upper left corner.
 
-![](images/image9.png)
+![](images/3-1-image9.png)
 
 Let’s zoom in on the browser window. We can do so by pressing the command and the + keys together.
 
-![](images/image5.png)
+![](images/3-1-image5.png)
 
 **Barchart Step 4**
 
@@ -128,7 +128,7 @@ And apply it to the height of the bars
 
 Now our bars are tall but still 1 pixel wide.
 
-![](images/image4.png)
+![](images/3-1-image4.png)
 
 Next let’s scale the width of the bars. We can once again use a linear scale. But a simpler method would be to directly scale the bars by setting the bar width to more than 1, and multiplying the index by that width to get the x position.
 
@@ -154,7 +154,7 @@ yScale(d.x) is the height of our bars, and 300 is the height of our canvas, ther
 
 Now we have a barchart of sorts.
 
-![](images/image7.png)
+![](images/3-1-image7.png)
 
 **Barchart Step 6**
 
@@ -167,7 +167,7 @@ We have so far built this inside a function, and we can change our data between 
 
 And here we have bar graphs of the x values of each set.
 
-![](images/image6.png)
+![](images/3-1-image6.png)
 
 We can see the isolated value of x more clearly than the scatterplot from our previous module. In fact we can see right away that the x values of the first 3 sets are identical.
 
@@ -199,7 +199,7 @@ To draw a bar chart for set1 but using y values:
 
     barChart(set1,"y")
 
-![](images/image2.png)
+![](images/3-1-image2.png)
 
 **Barchart Step 8**
 
@@ -214,7 +214,7 @@ This puts a simple title on bar chart. However, in  order to make this function
 
 We would see the titles x and y applied on the top of each.
 
-![](images/image10.png)
+![](images/3-1-image10.png)
 
 **Barchart Step 9**
 
@@ -233,7 +233,7 @@ Finally, we will have to include the actual value of the input in our function c
 
 Save your edits and we have 2 charts, red for the x values, and blue for the y.
 
-![](images/image3.png)
+![](images/3-1-image3.png)
 
 **Barchart Step 10 On your own:**
 

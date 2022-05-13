@@ -29,11 +29,11 @@ Inside module2_anscombe you will find the 3 files below:
 Open the folder with Visual Studio Code. Go to “File” menu in Visual Studio Code, and then clicking on “Open Folder”, or simply by dragging the folder to the application’s icon.
 
 Click the “Go Live” button on the lower right corner of the file window. 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/2-image12.png "image_tooltip")
 This will open a new browser window with your index page already loaded. Since we have not written any code yet, the new browser window will simply say “this is a blank page”, as it is written in our index.html file.
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/2-image3.png "image_tooltip")
 
 
 **Step 2. Link Files**
@@ -47,7 +47,7 @@ Next our index.html file needs access to both the d3 library and the code that w
 
     <script src="anscombe.js"></script>
 ```
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/2-image5.png "image_tooltip")
 
 
 **Step 3. A Simple SVG Drawing**
@@ -76,7 +76,7 @@ var svg = d3.select("body")
    .attr("height",400)
 ```
 In the browser, nothing would have visibly changed. The svg is a blank canvas and not visible. Go to the web inspector and click on the elements tab, a svg should appear within the body section (highlighted in light blue below).
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/2-image9.png "image_tooltip")
 
 Let’s draw a simple circle on our svg. Dot notation is used to chain lines of code together in d3 - you already saw this above with the creation of the svg. We will follow a similar pattern to create a circle. First we append the circle to our svg variable, then we set its attributes. A circle is defined by a minimum of these 3 attributes, “r” for radius, “cx” for the x coordinate of its center, and “cy” for the y coordinate of its center.
 
@@ -88,7 +88,7 @@ svg.append("circle")
 ```
 
 Now you should see a circle appear on the page.
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/2-image1.png "image_tooltip")
 
 And this is our first SVG drawing using d3. Not very exciting yet, so let’s continue using the same pattern and create a chart by adding some data.
 
@@ -113,7 +113,7 @@ console.log(set1[0])
 We would see the below in the developer’s console:
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/2-image7.png "image_tooltip")
 
 
 If we would like to access the x value of the first object within set1, then we would get the first object using the index 0 again, and then use the key “x” to access that value.
@@ -155,7 +155,7 @@ Svg is the canvas we created in step 2, which we will be placing our circles on,
 We are appending circles for a scatterplot in this case, but you can append anything from HTML paragraphs, to jpeg image tags. 
 
 Now if we look at the page, nothing will be on the page itself, we will not see circles. That is because we have not set the radius, cx, and cy for these circles. However we can check that they are there by opening the developer’s console and expending the svg section in the elements tab. We can see that there are 10 circle elements in our svg. Next we will set their attributes so that they are visible.
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/2-image6.png "image_tooltip")
 
 Let’s add the following to our chain:
 
@@ -173,12 +173,12 @@ Here we are setting the radius of each of our 10 circles to 5 pixels. And we are
 
 In our developer’s console’s elements tab, we see that the circle elements inside the svg now has r, cx, and cy attributes set for each one, and we can check that the x and y values do in fact correspond to our dataset set1.
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/2-image10.png "image_tooltip")
 
 
 Now let’s go to our browser window. We can see the circles on the page, although they are very close together in the very upper left corner. 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/2-image11.png "image_tooltip")
 
 Why is that? The x and y values we used here are directly translated to pixel values on the screen, which means that the first circle is placed only 10 pixels to the right and 8 pixels from the top of the window.  In fact, all these values are too small to be drawn directly without scaling. You will find that it is often the case that values need to be scaled up or down to be visually legible on the screen. Next we will implement a d3 scale to solve this problem.
 
@@ -228,7 +228,7 @@ var yScale = d3.scaleLinear()
 Now looking at our browser window, we have a clearer view of the circles and the main portion of our first scatterplot is complete.
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/2-image13.png "image_tooltip")
 
 
 **Step 6 Axis and Labels**
@@ -265,7 +265,7 @@ svg.append("g").call(yAxis)
 Now we can see the x axis at the top of the page - although it is oriented for the bottom with the ticks and number labels below. Similarly we can see a line to the left, that is the y axis with ticks and labels off the screen to the left.
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/2-image16.png "image_tooltip")
 
 
 The axis are oriented the right way but their position is at the top and very left of the page. We now need to reposition them, and also our scatterplot circles on the svg so that everything makes sense.
@@ -281,7 +281,7 @@ svg.append("g").call(yAxis).attr("transform","translate(30,30)")
 
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/2-image14.png "image_tooltip")
 
 
 For the x axis, we will need to move the axis 30 pixel each way as well to accommodate what we just did with the y axis. In addition, we will move the x axis to the bottom of the chart by adding 300 pixels(the pixel value which is the maxim for our scale). 
@@ -291,7 +291,7 @@ For the x axis, we will need to move the axis 30 pixel each way as well to accom
 svg.append("g").call(xAxis).attr("transform","translate(30,330)")
 ```
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/2-image18.png "image_tooltip")
 
 
 And finally let’s not forget that we need to move all our circles 30 pixels in each direction as well to align with the axis. Let’s add this line to the bottom of our circle drawing chain.
@@ -315,7 +315,7 @@ svg.append("text").text("y").attr("x",0).attr("y",160)
 And here is our completed scatterplot.
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/2-image8.png "image_tooltip")
 
 
 We can now go and take a look at the original plot for this set on wikipedia here: https://en.wikipedia.org/wiki/Anscombe%27s_quartet
@@ -336,7 +336,7 @@ And let’s see what this one looks like. We can simply go back to where we set 
 When we save this file, we will see an entirely new plot replace our first. 
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/2-image17.png "image_tooltip")
 
 
 **Step 8 Encapsulation**
@@ -399,7 +399,7 @@ function scatterPlot(){
 ```
 scatterPlot()
 ```
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/2-image8.png "image_tooltip")
 
 And if we call this function multiple times, we will see multiple svgs with scatterplots appear on the page. Try 4.
 ```
@@ -408,7 +408,7 @@ scatterPlot()
 scatterPlot()
 scatterPlot()
 ```
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/2-image15.png "image_tooltip")
 
 
 However, each of these are identical. To really be useful, the plot would be set independently for each time the function is run. Let’s reproduce the quartet next with its 4 sets of data. 
@@ -448,7 +448,7 @@ Here we are calling the function with the set1 variable as the input.
 ```
 scatterPlot(set1)
 ```
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/2-image8.png "image_tooltip")
 
 
 We can see that the set1 plot has reappeared on the page. Let’s try with the other sets:
@@ -465,4 +465,4 @@ scatterPlot(set4)
 And here we have it, Anscombe’s quartet in d3.js
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/2-image4.png "image_tooltip")

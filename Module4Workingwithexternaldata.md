@@ -48,11 +48,11 @@ Let’s check what we have loaded by logging the data out in our console.
 
 Under console in our devTools window, we should see the data being printed out. The data is nested inside an array. This is useful for when we load more than 1 dataset. Since there is only 1 item in our array, to get to the data, we simply use data[0] to access the first item in the array.
 
-![](images/image3.png)
+![](images/4-image3.png)
 
 Take a closer look at the json by expanding it in the console.
 
-![](images/image1.png)
+![](images/4-image1.png)
 
 
 **Step 2 Creating a chart**
@@ -113,7 +113,7 @@ We must make this call within the context of the loaded data, within the .then s
 
 Here is our scatterplot again, drawn with the same function, but using a external data file.
 
-![](images/image2.png)
+![](images/4-image2.png)
 
 **Step 4 On Your Own**
 

@@ -20,7 +20,7 @@ Inside you will find 3 files that you should be familiar with from the setup mod
 
 On the browser page once we go live with our page, we can see a bar chart for the y values of set1.
 
-![](images/image5.png)
+![](images/5-image5.png)
 
 **Introduction to "this" selections**
 
@@ -74,7 +74,7 @@ Then add a new attribute to “this”, for example changing the fill color to b
 
 Once you save, the rectangle elements will turn black if the mouse rolls over them.
 
-![](images/image6.png)
+![](images/5-image6.png)
 
 **Step 2 Mouseout**
 
@@ -103,7 +103,7 @@ The first is a simple tooltip that is a default in the browser. We can simply ad
        return d[columnInUse]
    })
 
-![](images/image4.png)
+![](images/5-image4.png)
 
 We can also use additional text here and make the tooltip more descriptive. Here we are simply adding 2 strings together with a + sign.
 
@@ -111,7 +111,7 @@ We can also use additional text here and make the tooltip more descriptive. Here
            return "The value is "\+ d\[columnInUse\]
        })
 
-![](images/image7.png)
+![](images/5-image7.png)
 
 **Step 3 SVG Tooltips**
 
@@ -141,7 +141,7 @@ And then we will append a text element to the svg and set its position with the 
 
 When we save the code and rollover the bars, the y values will appear.
 
-![](images/image3.png)
+![](images/5-image3.png)
 
 In order to create the event handler for the text label to disappear we will use on mouseout once again.
 
@@ -151,7 +151,7 @@ In order to create the event handler for the text label to disappear we will use
 
 Now if we save the page, we can see that the tooltip text does disappear when we rollover to the next bar, but the title of the page “y” on the left upper corner also disappears.
 
-![](images/image2.png)![](images/image1.png)
+![](images/5-image2.png)![](images/5-image1.png)
 
 This is because we are removing all text on the page each time. We need a method of isolating only the text in the tooltips and not the title. We do so by setting a class for the rectangle text and not for the title text. A class is an attribute that can be applied to multiple elements on the page to form a group that can be selected later. A class is selected using dot notation. The class we are attributing to the text labels here is “tooltip”.
 
